@@ -617,6 +617,14 @@
     padding: 10%;
   }
 
+  .cta-addcart-button {
+    margin-left: -10%;
+  }
+
+  .pricing {
+    margin-left: 10px;
+  }
+
 }
 
 
