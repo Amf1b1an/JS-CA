@@ -35,7 +35,7 @@
         <div class="h1-bar">
             <h1>TOP PICKS</h1>
         </div>
-        <section class="game-gallery">
+        <section class="game-gallery" id="gameGallery">
             <div class="game-poster">
                 <img src="assets/images/assassin.jpg" alt="gametxt">
             </div>
@@ -57,15 +57,19 @@
         </div>
         <section class="main-page-game-list">
             <section class="super-duper">
-                <h2>SUPER DUPER</h2>
-                <img src="assets/images/SuperDuper.jpg" class="game-poster" alt="cover of super Duper">
+                <a href="html/Product.html?id=2ace4e1d-cad7-4d35-8d59-6c9ac3e3eaf8">
+                    <h2>SUPER DUPER</h2>
+                </a>
+                <a href="html/Product.html">
+                    <img src="assets/images/SuperDuper.jpg" class="game-poster" alt="cover of super Duper">
+                </a>
                 <p class="game-des">Super Duper is a fast-paced and humorous party game where players compete in wild mini-games with a fun retro theme.
                     With simple controls and colorful graphics, the game challenges you to master everything from rhythm-based dancing
                 to chaotic obstacle courses. 
                 Collect points, beat your friends, and become the ultimate party champion! 
                 Perfect for a night of laughter and fun, whether playing solo or with friends in multiplayer mode.</p>
                 <a href="html/Cart.html" class="cta-addcart-button">ADD To CART <br> BUY NOW</a>
-                <p class="pricing">EST TOTAL 24.99 USD</p>
+                <p class="pricing">EST TOTAL: <span id="price">USD</span></p>
             </section>
             <section class="black">
                 <h2>BLACK</h2>
@@ -116,6 +120,7 @@
             </ul>
         </nav>
     </footer>
+    <script src="javascript/index.js"></script>
 </body>
 
 

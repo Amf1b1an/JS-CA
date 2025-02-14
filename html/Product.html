@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <script src="../javascript/index.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
-    <meta name="description" content="Game hub is a website where everyone can purchase new games.">
+    <meta name="description" content="">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
@@ -16,14 +15,13 @@
 </head>
 
 <body>
-    <div class="top-bar">invincible</div>
     <header>
         <section class="top">
             <div class="logo-container">
                 <a href="../index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo" alt="Game Hub logo"></a>
                 <nav class="cart-hamburger">
                     <ul>
-                        <li><a href="html/Cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <li><a href="Cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                             <path d="M2 2H10L15.36 28.78C15.5429 29.7008 16.0438 30.5279 16.7751 31.1166C17.5064 31.7053 18.4214 32.018 19.36 32H38.8C39.7386 32.018 40.6536 31.7053 41.3849 31.1166C42.1162 30.5279 42.6171 29.7008 42.8 28.78L46 12H12M20 42C20 43.1046 19.1046 44 18 44C16.8954 44 16 43.1046 16 42C16 40.8954 16.8954 40 18 40C19.1046 40 20 40.8954 20 42ZM42 42C42 43.1046 41.1046 44 40 44C38.8954 44 38 43.1046 38 42C38 40.8954 38.8954 40 40 40C41.1046 40 42 40.8954 42 42Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></a> </li>
                         <li><img src="../assets/images/hamburger menu icon.png" alt="non-functional hamburger menu icon"</li>
@@ -32,24 +30,20 @@
             </div>
         </section>  
     </header>
+
     <main>
-        <div class="h1-bar-cart">
-            <h1>about</h1>
+        <div id="product-container">
+            <h1 id="product-title"></h1>
+            <img id="product-image" src="" alt="Product Image">
+            <p id="product-description"></p>
+            <p>Price: <span id="product-price"></span></p>
+            <button>Add to Cart</button>
         </div>
-        <section class="about-text">
-            <h4>ABOUT GAME HUB</h4>
-            <h3>THE UNIVERSE OF GAMES</h3>
-            <P>Welcome to Game Hub, your ultimate destination for buying and selling games. Whether you’re a passionate gamer or just getting started, Game Hub brings the entire gaming 
-                universe to your fingertips. Our platform connects players with the latest titles, timeless classics, and hard-to-find games across every genre and platform.</P>
-            <p>We believe gaming is more than just a hobby—it’s a community. That’s why Game Hub is built not only to offer 
-                the best games but also to provide a seamless experience for gamers looking to buy, sell, or trade. Whether you’re expanding your collection or passing 
-                on a favorite, we make it easy and secure for you to explore new worlds and experiences.</p>
-        </section>
     </main>
     <footer>
         <div class="invincible">invincible</div>
         <section class="bottom">
-            <a href="index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo-bottom" alt="Game Hub logo"></a>
+            <a href="/index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo-bottom" alt="Game Hub logo"></a>
             <div class="games-catalogue">
                 <h2 class="BROWSE">BROWSE ALL GAMES <br> <a href="Catalogue.html" class="FC-button">Full Catalogue</a></h2>   
             </div>       
@@ -62,5 +56,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="../javascript/product.js" defer></script>
 </body>
-</html>   
+</html>
