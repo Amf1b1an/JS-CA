@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script src="../javascript/index.js" defer></script>
+    <script src="../javascript/checkout.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
@@ -23,7 +23,7 @@
                 <a href="../index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo" alt="Game Hub logo"></a>
                 <nav class="cart-hamburger">
                     <ul>
-                        <li><a href="html/Cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <li><a href="../html/Cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                             <path d="M2 2H10L15.36 28.78C15.5429 29.7008 16.0438 30.5279 16.7751 31.1166C17.5064 31.7053 18.4214 32.018 19.36 32H38.8C39.7386 32.018 40.6536 31.7053 41.3849 31.1166C42.1162 30.5279 42.6171 29.7008 42.8 28.78L46 12H12M20 42C20 43.1046 19.1046 44 18 44C16.8954 44 16 43.1046 16 42C16 40.8954 16.8954 40 18 40C19.1046 40 20 40.8954 20 42ZM42 42C42 43.1046 41.1046 44 40 44C38.8954 44 38 43.1046 38 42C38 40.8954 38.8954 40 40 40C41.1046 40 42 40.8954 42 42Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></a> </li>
                         <li><img src="../assets/images/hamburger menu icon.png" alt="non-functional hamburger menu icon"</li>
@@ -34,16 +34,35 @@
     </header>
     <main>
         <div class="h1-bar-cart">
-            <h1>checkout</h1>
+            <h1 class="checkout-h1">checkout</h1>
         </div>
-        <section class="checkout-txt">
-            <h2 class="payment-approved">Payment approved</h2>
-            <h3 class="payment-txt">Your payment was successfully approved, and you can now
-                proceed to download your new game “ SUPER DUPER”.
-                Receipt will be sent to you on mail.
-                Enjoy
-            </h3>
-        </section>
+        <h1>Checkout</h1>
+
+    
+    <div id="checkout-container">
+        <h2>Order Summary</h2>
+        <ul id="checkout-items"></ul>
+        <h2 id="checkout-total-price"></h2>
+    </div>
+
+    
+    <h3>Billing Details</h3>
+    <form id="checkout-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" required>
+            <option value="">Select Payment Method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+    </form>
     </main>
     <footer>
         <div class="invincible">invincible</div>

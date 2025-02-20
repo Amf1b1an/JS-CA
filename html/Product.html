@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="../javascript/index.js" defer></script>
+    <script src="../javascript/product.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div class="top-bar">invincible</div>
     <header>
         <section class="top">
             <div class="logo-container">
@@ -32,12 +33,14 @@
     </header>
 
     <main>
-        <div id="product-container">
-            <h1 id="product-title"></h1>
-            <img id="product-image" src="" alt="Product Image">
-            <p id="product-description"></p>
-            <p>Price: <span id="product-price"></span></p>
-            <button>Add to Cart</button>
+        <div id="product-container" class="product-container-style">
+            <img id="product-image" src="" alt="Product Image" class="product-image-style">
+            <div>
+                <p id="product-title" class="product-title-style"></p>
+                <p id="product-description" class="product-description-style"></p>
+            </div>
+            <p>Price: <span id="product-price" class="product-price-style"></span></p>
+            <button class="add-to-cart-cta" id="add-to-cart">Add to Cart</button>
         </div>
     </main>
     <footer>
@@ -56,6 +59,6 @@
             </ul>
         </nav>
     </footer>
-    <script src="../javascript/product.js" defer></script>
+    <script src="../javascript/product.js" defer></scrip>
 </body>
 </html>

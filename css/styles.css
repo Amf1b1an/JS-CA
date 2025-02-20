@@ -110,7 +110,69 @@
   
   
   
-  h1 { 
+
+  .index-h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -120px;
+    position: relative;
+    color: #FFF;
+    background-color: #1B203D;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .about-h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -120px;
+    position: relative;
+    color: #FFF;
+    background-color: #1B203D;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .cart-h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -120px;
+    position: relative;
+    color: #FFF;
+    background-color: #1B203D;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .Catalogue-h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -120px;
+    position: relative;
+    color: #FFF;
+    background-color: #1B203D;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .checkout-h1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: -120px;
+    position: relative;
+    color: #FFF;
+    background-color: #1B203D;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .contact-h1 {
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -476,6 +538,130 @@
 
   }
 
+  .product-container-style {
+    display: flex;
+    max-width: auto;
+    height: 100%;
+    padding: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #7E8AB4;
+    border: 3px solid #1B203D;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #1B203D;
+  }
+  
+  .product-image-style {
+    max-width: 100%;
+    width: 25%;
+    height: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+  }
+  
+  .product-title-style {
+    max-width: 100%;
+    height: auto;
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+    padding: 0.2em 1em;
+    border: 3px solid #1B203D;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #1B203D;
+    text-decoration: none;
+    transition: 0.3s ease all;
+
+
+  
+  }
+  
+  .product-description-style {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-price-style {
+
+  }
+  button {
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #1B203D;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #7E8AB4;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+    button:before {transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #1B203D;
+    z-index: -1;
+    }
+
+    button:hover, button:focus {
+      color: #7E8AB4;
+    }
+
+    button:hover:before, button:focus:before {
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 0;
+    }
+    button:active {
+      transform: scale(0.9);
+    }
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.item-box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+.clear-and-continue {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.checkout-button {
+  bottom: 15px;
+}
+
+.remove-singular {
+  color: #1B203D;
+}
 }
 
 
@@ -621,8 +807,38 @@
     margin-left: 10px;
   }
 
+  
+.product-container-style {
+  display: flex;
+  max-width: auto;
+  height: 100%;
+  padding: 5%;
 }
 
+.product-image-style {
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.product-title-style {
+  max-width: 100%;
+  height: 150px;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-description-style {
+
+}
+
+.product-price-style {
+
+}
+
+}
 
 @media (max-width: 393px) {
   .game-des {
@@ -634,3 +850,4 @@
     font
   }
 }
+

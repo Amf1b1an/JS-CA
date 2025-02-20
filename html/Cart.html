@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script src="../javascript/index.js" defer></script>
+    <script src="../javascript/cart.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
@@ -32,47 +32,39 @@
             </div>
         </section>  
     </header>
+
     <main>
         <div class="h1-bar-cart">
-            <h1>cart</h1>
+            <h1 class="cart-h1">cart</h1>
         </div>
-        <div class="prod-price">
-            <h2>Product</h2>
-            <h2>Price</h2>
-        </div>
-        <section class="cart-column">
-           <div class="column left-column"></div> 
-           <div class="column center-column">
-                <section class="super-duper">
-                    <img src="../assets/images/SuperDuper.jpg" class="game-cover-cart" alt="cover of super Duper">
-                    <h2 class="cart-game-title">SUPER DUPER</h2>
-                    <h3 class="cart-price">24.99 USD</h3>
-                </section>
+        <h1 class="cart-h1">Your Shopping Cart</h1>
+        <div id="cart-container" class="cart-container">
+            <div class="item-box">
+                <p id="empty-cart-message">Your cart is empty.</p>
+                <ul id="cart-items"></ul>
+                <h2 id="total-price"></h2>
             </div>
-            <div class="column right-column"></div> 
-        </section>
-        <section class="payment-methods">
-            <a href="Checkou.html">
-                <h3 class="cta-payment-methods">Credit/debit</h3>
-                <h3 class="cta-payment-methods">apple pay</h3>
-                <h3 class="cta-payment-methods">wallet fun<br>balance 0,-</h3>
-                <h3 class="cta-payment-methods">paypal</h3>
-            </a>
-        </section>
+            <div class="clear-and-continue">
+                <button id="proceed-checkout" class="checkout-button">Continue to payment</button>
+                <button id="clear-cart">Clear Cart</button>
+            </div>
+        </div>
+    
     </main>
+
     <footer>
         <div class="invincible">invincible</div>
         <section class="bottom">
             <a href="index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo-bottom" alt="Game Hub logo"></a>
             <div class="games-catalogue">
-                <h2 class="BROWSE">BROWSE ALL GAMES <br> <a href="html/Catalogue.html" class="FC-button">Full Catalogue</a></h2>   
+                <h2 class="BROWSE">BROWSE ALL GAMES <br> <a href="Catalogue.html" class="FC-button">Full Catalogue</a></h2>   
             </div>       
         </section>
         <nav class="bottom-nav-bar">
             <ul class="nav-content">
-                <li><a href="html/About.html">ABOUT</a></li>
-                <li><a href="html/Contact.html">CONTACT</a></li>
-                <li><a href="html/About.html">SUPPORT</a></li>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+                <li><a href="About.html">SUPPORT</a></li>
             </ul>
         </nav>
     </footer>
