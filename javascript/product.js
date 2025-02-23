@@ -1,36 +1,41 @@
 const apiUrl = "https://v2.api.noroff.dev/gamehub/";
-const productId = "2ace4e1d-cad7-4d35-8d59-6c9ac3e3eaf8";
 
-// 🛒 Function to Add Product to Cart
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+
 function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get existing cart or create an empty array
-    cart.push(product); // Add the new product to the cart
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
-    alert("Product added to cart!"); // Confirmation message (optional)
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; 
+    console.log("Before adding:", cart);
+    cart.push(product); 
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    console.log("After adding:", cart);
+    alert("Product added to cart!"); 
 }
 
-// 🎮 Fetch and Display API Product
 async function fetchProduct(id) {
     try {
         const response = await fetch(`${apiUrl}${id}`);
         if (!response.ok) throw new Error("Game not found");
 
         const { data: product } = await response.json();
-        console.log("Fetched Product Data:", product); // Debugging
+        console.log("Fetched Product Data:", product); 
 
-        // 🖼️ Display product details
         document.getElementById("product-title").textContent = product.title;
         document.getElementById("product-image").src = product.image.url;
         document.getElementById("product-image").alt = product.title;
         document.getElementById("product-description").textContent = product.description;
         document.getElementById("product-price").textContent = `$${product.discountedPrice ?? product.price}`;
+        document.getElementById("genre").textContent = product.genre;
+        document.getElementById("release-date").textContent = product.released;
+        document.getElementById("age-rating").textContent = product.ageRating;
+        document.getElementById("on-sale").textContent = product.onSale ? "On Sale" : "Not on Sale";
 
-        // 🛒 Add to Cart button event listener
         document.getElementById("add-to-cart").addEventListener("click", function () {
             addToCart({
                 name: product.title,
                 image: product.image.url,
                 description: product.description,
+                age: product.ageRating,
                 price: `$${product.discountedPrice ?? product.price}`
             });
         });
@@ -41,5 +46,10 @@ async function fetchProduct(id) {
     }
 }
 
-// Fetch product details when the page loads
-fetchProduct(productId);
+
+if (productId) {
+    fetchProduct(productId);
+} else {
+    console.error("No product ID provided in the URL.");
+    document.getElementById("product-container").innerHTML = "<p>No Product ID specified.</p>";
+}

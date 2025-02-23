@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="../javascript/product.js" defer></script>
+    <script src="../javascript/confirmation.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Hub</title>
-    <meta name="description" content="">
+    <meta name="description" content="Game hub is a website where everyone can purchase new games.">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
@@ -26,36 +27,35 @@
                             <path d="M2 2H10L15.36 28.78C15.5429 29.7008 16.0438 30.5279 16.7751 31.1166C17.5064 31.7053 18.4214 32.018 19.36 32H38.8C39.7386 32.018 40.6536 31.7053 41.3849 31.1166C42.1162 30.5279 42.6171 29.7008 42.8 28.78L46 12H12M20 42C20 43.1046 19.1046 44 18 44C16.8954 44 16 43.1046 16 42C16 40.8954 16.8954 40 18 40C19.1046 40 20 40.8954 20 42ZM42 42C42 43.1046 41.1046 44 40 44C38.8954 44 38 43.1046 38 42C38 40.8954 38.8954 40 40 40C41.1046 40 42 40.8954 42 42Z" stroke="#1E1E1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg></a> 
                         </li>
-                        
+
                         <li><img src="../assets/images/hamburger menu icon.png" alt="non-functional hamburger menu icon"</li>
                     </ul>
                 </nav>
             </div>
         </section>  
     </header>
-
     <main>
-        <div id="product-container" class="product-container-style">
-            <img id="product-image" src="" alt="Product Image" class="product-image-style">
-            <div>
-                <p id="product-title" class="product-title-style"></p>
-                <p id="product-description" class="product-description-style"></p>
-                <div class="homepage-genre-release">
-                    <p class="homepage-genre"><span id="genre"></span></p>
-                    <p id="age-rating" class="age-rating-product"></p>
-                    <p id="release-date" class="homepage-release"></p>
-                </div>
+        <div class="h1-bar-cart">
+            <h1 class="about-h1">Thank You For Your Purchase</h1>
+        </div>
+        <div class="confirmation-page">
+            <h2>Your digital games will be delivered to your email shortly.</h2>
+        
+    
+        <h2>Order Summary</h2>
+            <div id="order-summary" class="order-recap">
+                <ul id="purchased-items" class="items-recap"></ul>
+                <h3 id="total-price"></h3>
 
             </div>
-            <p>Price: <span id="product-price" class="product-price-style"></span></p>
-            <p id="on-sale" class="on-sale-product"></p>
-            <button class="add-to-cart-cta" id="add-to-cart">Add to Cart</button>
+
+            <button id="return-home" class="return-button">Return to Homepage</button>
         </div>
     </main>
     <footer>
         <div class="invincible">invincible</div>
         <section class="bottom">
-            <a href="/index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo-bottom" alt="Game Hub logo"></a>
+            <a href="index.html"><img src="../assets/images/Game Hub logo.png" class="web-logo-bottom" alt="Game Hub logo"></a>
             <div class="games-catalogue">
                 <h2 class="BROWSE">BROWSE ALL GAMES <br> <a href="Catalogue.html" class="FC-button">Full Catalogue</a></h2>   
             </div>       
@@ -68,6 +68,5 @@
             </ul>
         </nav>
     </footer>
-    <script src="../javascript/product.js" defer></scrip>
 </body>
-</html>
+</html>   

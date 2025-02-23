@@ -1,47 +1,59 @@
-fetch('https://v2.api.noroff.dev/gamehub/2ace4e1d-cad7-4d35-8d59-6c9ac3e3eaf8')
-    .then(res => {
-        if (res.ok) {
-            console.log('VALID')
-        } else {
-            console.log("INVALID")
-        }
-    })
-    .then(data => console.log(data))
-    .catch(error => console.log('ERROR'))
-
-    
-async function fetchProduct(id){
-
-    try {
-        const response = await fetch (`${apiUrl}${id}`);
-        if (!response.ok) throw new Error ("Game not found");
-
-        const { data: product } = await response.json()
-
-
-        document.getElementById("product-title").textContent = product.title;
-        document.getElementById("product-image").src = product.image.url;
-        document.getElementById("product-image").alt = product.title;
-        document.getElementById("product-description").textContent = product.description;
-        document.getElementById("product-price").textContent = `$${product.discountedPrice ?? product.price}`;
-    } catch (error) {
-        console.error("Error loading product:", error);
-
-        document.getElementById("product-container").innerHTML = "<p>Game Not Found</p>"
-    }
-} 
-
 const apiUrl = "https://v2.api.noroff.dev/gamehub/";
-const productId = "2ace4e1d-cad7-4d35-8d59-6c9ac3e3eaf8"
-fetchProduct(productId);
 
-fetch(`${apiUrl}${productId}`)
-    .then(res => {
-        if (!res.ok) {
-            console.log("INVALID URL");
-            return;
-        }
-        return res.json(); // Convert response to JSON
-    })
-    .then(data => console.log("Fetched Data:", data))
-    .catch(error => console.error("Fetch Error:", error));
+async function fetchAllProducts() {
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) throw new Error("Failed to fetch products");
+    
+
+    const { data: products } = await response.json();
+    console.log("Fetched Products:", products);
+
+
+    const container = document.getElementById("products-container");
+    if (!container) {
+      throw new Error("Container with ID 'products-container' not found in HTML");
+    }
+    container.innerHTML = ""; 
+
+
+    products.forEach(product => {
+
+      const productBox = document.createElement("div");
+      productBox.classList.add("game-box");
+
+
+      productBox.innerHTML = `
+        <a href="html/Product.html?id=${product.id}">
+          <img src="${product.image.url}" class="game-poster" alt="Cover of ${product.title}">
+        </a>
+        <div class="Homepage-title-desc">
+          <a href="html/Product.html?id=${product.id}">
+            <h2 class="homepage-title">${product.title}</h2>
+          </a>
+          <div class="game-des-pricing">
+            <p class="game-des">${product.description}</p>
+            <p class="pricing">$${product.discountedPrice ?? product.price}</p>
+          </div>
+          <div class="homepage-genre-release">
+            <p class="homepage-genre">${product.genre}</p>
+            <p class="age-rating-product">${product.ageRating}</p>
+            <p class="homepage-release">${product.released}</p>
+          </div>
+        </div>
+      `;
+
+
+      container.appendChild(productBox);
+    });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    const container = document.getElementById("products-container");
+    if (container) {
+      container.innerHTML = "<p>Products could not be loaded.</p>";
+    }
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", fetchAllProducts);

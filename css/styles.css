@@ -194,13 +194,12 @@
     width: 100%;
   }
   
+
   .game-poster {
-   max-width: 100%;
-   max-height: 100%;
-   height: 200px;
-   margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
+    max-height: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
   }
   
   .game-gallery {
@@ -210,88 +209,86 @@
     flex-wrap: wrap;
     background-color: #7E8AB4;
     padding: 65px;
-    margin-top: -115px;
+    margin-top: -55px;
   }
   
   .new.releases.bar {
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin-top: -120px;
-      position: relative;
       color: #FFF;
       background-color: #1B203D;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+
   }
   
   .new-rel-bar {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: -20px;
     position: relative;
     color: #FFF;
     background-color: #1B203D;
     align-items: center;
     justify-content: center;
     padding: 15px;
+    margin-top: -20px;
+    margin-bottom: -10px;
   }
   
   h2 {
-    width: 150px;
-    padding-left: 40px;
-    padding-right: 50px;
+    width: 200px;
     color: #FFF;
   }
-  
+  a {
+    display: inline-block;
+    width: auto;
+  }
+  .homepage-title {
+    font-size: 1.5rem;
+    width: 200px;
+  }
+
+  .homepage-title-desc {
+    width: auto;
+  }
+
   .game-des {
     color: #FFF;
     max-width: 50%;
-    justify-content: flex-start;
-    padding: 5px;
     font-size: 60%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  .game-des-pricing {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    background-color: #1B203D;
+    justify-content: stretch;
   }
   
-  
-  .super-duper {
-    max-width: 100%;
+  .game-box {
     display: flex;
-    padding: 50px;
-    justify-content: space-between;
-    background: linear-gradient(90deg, rgba(255, 236, 9, 0.18) 38%, rgba(126, 138, 180, 0.18) 100%);
+    flex-direction: row;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(6, 7, 71, 0.18) 38%, rgba(126, 138, 180, 0.18) 100%);
     box-shadow: 0px 4px 10.9px 0px rgba(0, 0, 0, 0.25);
   
   }
-  
-  .black {
-    max-width: 100%;
+  .homepage-genre-release {
     display: flex;
-    padding: 50px;
-    justify-content: space-between;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.42) 11.5%, rgba(126, 138, 180, 0.42) 100%);
-    box-shadow: 0px 4px 10.9px 0px rgba(0, 0, 0, 0.25);
+    flex-direction: row;
+    gap: 15px;
+    font-size: 1rem;
+    justify-content: flex-start;
+
   }
-  
-  .racing {
-    padding: 50px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(90deg, rgba(255, 0, 4, 0.42) 11.5%, rgba(126, 138, 180, 0.42) 100%);
-    box-shadow: 0px 4px 10.9px 0px rgba(0, 0, 0, 0.25);
-  }
-  
-  .forge-legend {
-    padding: 50px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(90deg, rgba(236, 144, 9, 0.42) 11.5%, rgba(126, 138, 180, 0.42) 100%);
-    box-shadow: 0px 4px 10.9px 0px rgba(0, 0, 0, 0.25);
-  }
-  
+
   .cta-addcart-button {
     padding: 10px 20px; 
     background-color: #ffffff; 
@@ -299,6 +296,17 @@
     border-radius: 50px; 
     cursor: pointer;
     margin-bottom: 175px; 
+  }
+
+  .pricing {
+    max-height: 100%;
+    height: auto;
+    display: flex;
+    padding: 15px;
+    margin-left: auto;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
   }
   
   .cta-addcart-button:hover {
@@ -645,25 +653,124 @@
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: stretch;
+  gap: 10%;
 
 }
+
+.cart-item-css {
+
+}
+
 .clear-and-continue {
   max-width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: start;
+  gap: 25px;
 
 }
+
+.clear-and-continue h2 {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  justify-content: center;
+  color: #fff;
+}
 .checkout-button {
-  bottom: 15px;
+  
 }
 
 .remove-singular {
   color: #1B203D;
+  display: flex;
 }
 }
 
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.summary-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  
+}
+
+.summary-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-items: center;
+}
+
+.billing-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirmation-page h2 {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.order-recap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.items-recap {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.items-recap li {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.confirmation-page button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
 @media (max-width: 700px) {
   .logo-container {
@@ -710,7 +817,7 @@
   
   .racing {
     max-width: 100%;
-    max height: 400px;
+    max-height: 400px;
     height: 400px;
     padding: 10px;
     display: flex;
@@ -721,7 +828,7 @@
   
   .forge-legend {
      max-width: 100%;
-     max height: 400px;
+     max-height: 400px;
      height: 400px;
      padding: 10px;
     display: flex;
