@@ -52,17 +52,17 @@ function loadCart() {
 function updateQuantity(index, change) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    if (!cart[index]) return; // Prevent errors
+    if (!cart[index]) return; 
 
     cart[index].quantity = (cart[index].quantity || 1) + change;
 
-    // Prevent negative or zero quantity
+
     if (cart[index].quantity < 1) {
         cart[index].quantity = 1;
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
-    loadCart(); // Reload UI
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
 }
 
 function redirectCatalogue() {
