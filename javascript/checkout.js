@@ -71,7 +71,7 @@ document.getElementById("checkout-form").addEventListener("submit", function (ev
     const payment = document.getElementById("payment").value;
     const cart = JSON.parse(localStorage.getItem("cart")) || []
 
-    if (!name || !email || !address) {
+    if (!name || !email) {
         alert("Please fill in all required fields.");
         return;
     }

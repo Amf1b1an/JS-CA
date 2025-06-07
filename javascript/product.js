@@ -5,10 +5,10 @@ const productId = urlParams.get('id');
 
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem("cart")) || []; 
-    console.log("Before adding:", cart);
+
     cart.push(product); 
     localStorage.setItem("cart", JSON.stringify(cart)); 
-    console.log("After adding:", cart);
+
     alert("Product added to cart!"); 
 }
 
@@ -18,7 +18,7 @@ async function fetchProduct(id) {
         if (!response.ok) throw new Error("Game not found");
 
         const { data: product } = await response.json();
-        console.log("Fetched Product Data:", product); 
+
 
         document.getElementById("product-title").textContent = product.title;
         document.getElementById("product-image").src = product.image.url;

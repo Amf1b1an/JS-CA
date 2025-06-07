@@ -7,7 +7,7 @@ async function fetchAllProducts() {
     
 
     const { data: products } = await response.json();
-    console.log("Fetched Products:", products);
+    
 
 
     const container = document.getElementById("products-container");
